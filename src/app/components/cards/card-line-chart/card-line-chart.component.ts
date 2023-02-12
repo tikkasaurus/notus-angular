@@ -1,41 +1,48 @@
-import { Component, OnInit, AfterViewInit } from "@angular/core";
-import Chart from "chart.js";
+import { Component, OnInit } from '@angular/core';
+import Chart from 'chart.js';
+
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+const createDaysArrayForCurrentMonth = (): string[] => {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+  const currentMonth = date.getMonth() + 1;
+  const daysInCurrentMonth = new Date(currentYear, currentMonth, 0).getDate();
+  return Array(daysInCurrentMonth).fill(0).map((_, i) => {
+    return `${i+1}/${currentMonth}`;
+  });
+}
 
 @Component({
-  selector: "app-card-line-chart",
-  templateUrl: "./card-line-chart.component.html",
+  selector: 'app-card-line-chart',
+  templateUrl: './card-line-chart.component.html',
 })
 export class CardLineChartComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
   ngAfterViewInit() {
-    var config = {
-      type: "line",
+    const config = {
+      type: 'line',
       data: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
         ],
         datasets: [
           {
-            label: new Date().getFullYear(),
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [65, 78, 66, 44, 56, 67, 75],
+            label: 'Orders per month',
             fill: false,
-          },
-          {
-            label: new Date().getFullYear() - 1,
-            fill: false,
-            backgroundColor: "#fff",
-            borderColor: "#fff",
-            data: [40, 68, 86, 74, 56, 60, 87],
+            backgroundColor: '#84C8B5',
+            borderColor: '#84C8B5',
+            data: [30, 78, 56, 34, 100, 45, 13],
           },
         ],
       },
@@ -44,42 +51,37 @@ export class CardLineChartComponent implements OnInit {
         responsive: true,
         title: {
           display: false,
-          text: "Sales Charts",
-          fontColor: "white",
+          text: 'Sales Charts'
         },
         legend: {
           labels: {
-            fontColor: "white",
+            fontColor: 'rgba(0,0,0,.4)',
           },
-          align: "end",
-          position: "bottom",
+          align: 'end',
+          position: 'bottom',
         },
         tooltips: {
-          mode: "index",
+          mode: 'index',
           intersect: false,
         },
         hover: {
-          mode: "nearest",
+          mode: 'nearest',
           intersect: true,
         },
         scales: {
           xAxes: [
             {
-              ticks: {
-                fontColor: "rgba(255,255,255,.7)",
-              },
               display: true,
               scaleLabel: {
                 display: false,
-                labelString: "Month",
-                fontColor: "white",
+                labelString: 'Date'
               },
               gridLines: {
                 display: false,
                 borderDash: [2],
                 borderDashOffset: [2],
-                color: "rgba(33, 37, 41, 0.3)",
-                zeroLineColor: "rgba(0, 0, 0, 0)",
+                color: 'rgba(33, 37, 41, 0.2)',
+                zeroLineColor: 'rgba(33, 37, 41, 0.15)',
                 zeroLineBorderDash: [2],
                 zeroLineBorderDashOffset: [2],
               },
@@ -87,21 +89,17 @@ export class CardLineChartComponent implements OnInit {
           ],
           yAxes: [
             {
-              ticks: {
-                fontColor: "rgba(255,255,255,.7)",
-              },
               display: true,
               scaleLabel: {
                 display: false,
-                labelString: "Value",
-                fontColor: "white",
+                labelString: 'Value'
               },
               gridLines: {
                 borderDash: [3],
                 borderDashOffset: [3],
                 drawBorder: false,
-                color: "rgba(255, 255, 255, 0.15)",
-                zeroLineColor: "rgba(33, 37, 41, 0)",
+                color: 'rgba(33, 37, 41, 0.2)',
+                zeroLineColor: 'rgba(33, 37, 41, 0.15)',
                 zeroLineBorderDash: [2],
                 zeroLineBorderDashOffset: [2],
               },
@@ -110,8 +108,8 @@ export class CardLineChartComponent implements OnInit {
         },
       },
     };
-    let ctx: any = document.getElementById("line-chart") as HTMLCanvasElement;
-    ctx = ctx.getContext("2d");
+    let ctx: any = document.getElementById('line-chart') as HTMLCanvasElement;
+    ctx = ctx.getContext('2d');
     new Chart(ctx, config);
   }
 }

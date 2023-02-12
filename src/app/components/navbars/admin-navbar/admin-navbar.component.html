@@ -3,33 +3,62 @@
   class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4"
 >
   <div
-    class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4"
+    class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-3 py-2"
   >
     <!-- Brand -->
-    <a
-      class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
-      href="#pablo"
-      >Dashboard</a
-    >
-    <!-- Form -->
-    <form
-      class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
-    >
-      <div class="relative flex w-full flex-wrap items-stretch">
-        <span
-          class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
-          ><i class="fas fa-search"></i
-        ></span>
-        <input
-          type="text"
-          placeholder="Search here..."
-          class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
-        />
-      </div>
-    </form>
-    <!-- User -->
-    <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
-      <app-user-dropdown class="block"></app-user-dropdown>
-    </ul>
+    <a class="uppercase hidden md:inline-block" href="/admin/dashboard">
+      <img class="lg:w-1" src="https://www.eateasy.se/uploads/2021/01/eateasy-eateasy-kopia-1536x490.png" alt="Eat Easy" width="160">
+    </a>
+
+    <div class="lg:flex flex-grow items-center hidden lg:inline-block" id="example-navbar-warning">
+      <ul class="flex flex-col lg:flex-row list-none ml-auto">
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center uppercase font-bold text-eateasy-primary hover:opacity-75 tracking-widest" href="/admin/dashboard">
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center uppercase font-bold text-white hover:opacity-75 tracking-widest" href="/admin/orders">
+            Orders
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center uppercase font-bold text-white hover:opacity-75 tracking-widest" href="/admin/settings">
+            Settings
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
+<!--  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">-->
+<!--    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">-->
+<!--      <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="#pablo">-->
+<!--        pink Color-->
+<!--      </a>-->
+<!--      <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button">-->
+<!--        <span class="block relative w-6 h-px rounded-sm bg-white"></span>-->
+<!--        <span class="block relative w-6 h-px rounded-sm bg-white mt-1"></span>-->
+<!--        <span class="block relative w-6 h-px rounded-sm bg-white mt-1"></span>-->
+<!--      </button>-->
+<!--    </div>-->
+<!--    <div class="lg:flex flex-grow items-center" id="example-navbar-warning">-->
+<!--      <ul class="flex flex-col lg:flex-row list-none ml-auto">-->
+<!--        <li class="nav-item">-->
+<!--          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">-->
+<!--            Discover-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">-->
+<!--            Profile-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">-->
+<!--            Setting-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
 </nav>

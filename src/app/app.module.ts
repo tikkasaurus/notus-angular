@@ -12,7 +12,7 @@ import { AuthComponent } from "./layouts/auth/auth.component";
 import { DashboardComponent } from "./views/admin/dashboard/dashboard.component";
 import { MapsComponent } from "./views/admin/maps/maps.component";
 import { SettingsComponent } from "./views/admin/settings/settings.component";
-import { TablesComponent } from "./views/admin/tables/tables.component";
+import { OrdersComponent } from "./views/admin/orders/orders.component";
 
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
@@ -78,7 +78,7 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     AuthComponent,
     MapsComponent,
     SettingsComponent,
-    TablesComponent,
+    OrdersComponent,
     LoginComponent,
     RegisterComponent,
     IndexComponent,

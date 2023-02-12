@@ -227,7 +227,7 @@ notus-angular
 │   │       │   │   └── settings.component.ts
 │   │       │   └── tables
 │   │       │       ├── tables.component.html
-│   │       │       └── tables.component.ts
+│   │       │       └── orders.component.ts
 │   │       ├── auth
 │   │       │   ├── login
 │   │       │   │   ├── login.component.html
